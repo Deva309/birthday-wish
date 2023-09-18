@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          to right top,
+          #1f0537,
+          #380c60,
+          #55108c,
+          #7413bb,
+          #9612eb
+        );
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 425px;
+        border: 10px solid #9612eb;
+        /* margin: 60px auto 0 auto; */
+        box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255),
+            rgba(255, 255, 255, 0.5)
+          ),
+          url('https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        background-color: #e6f0e6;
+      }
+      .card .text-container {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+      .card .text-container #head {
+        font-family: 'Nobile', sans-serif;
+        font-size: 1.5em;
+        margin: 40px auto 50px auto;
+      }
+      .card p {
+        font-size: 1.1em;
+        line-height: 1.4;
+        font-family: 'Nobile';
+        color: #331717;
+        font-style: italic;
+        text-align: center;
+        margin: 30px auto 0px auto;
+      }
+      .card .front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: -10px 0px 0px -10px;
+        border: 10px solid #9612eb;
+        backface-visibility: hidden;
+        background-color: #9612eb;
+        /* background-image: url($cover-image);
+	 */
+        background-size: contain;
+        transform-style: preserve-3d;
+        transform-origin: 0% 50%;
+        transform: perspective(800px) rotateY(0deg);
+        transition: all 0.8s ease-in-out;
+        z-index: 1;
+      }
+      .card:hover .front {
+        transform: perspective(800px) rotateY(-170deg);
+        background-color: #41718d;
+      }
+      .card:hover .back {
+        transform: perspective(800px) rotateY(-170deg);
+        box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3),
+          inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+        background-color: #d2dcd2;
+      }
+      .card .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #9612eb;
+        margin: -10px 0px 0px -10px;
+        backface-visibility: visible;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+        transform-style: preserve-3d;
+        transform-origin: 0% 50%;
+        transform: perspective(800px) rotateY(0deg);
+        transition: all 0.8s ease-in-out;
+        background-color: #e6f0e6;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      .imgset {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -215px;
+        height: 100%;
+      }
+      .imgset img {
+        box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hope-message {
+        position: absolute;
+        bottom: 60px;
+        left: calc(50% - 103px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="back"></div>
+      <div class="front">
+        <div class="imgset">
+          <!-- src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png" -->
+          <img
+            width="100%"
+            src="https://img.freepik.com/free-vector/detailed-birthday-lettering-with-balloons_52683-57605.jpg"
+          />
+        </div>
+      </div>
+      <div class="text-container">
+        <p id="head">Happy Birthday Karishma❤️!</p>
+        <p class="birthday-message">
+          To my future wife, Happy Birthday! Your love brightens each day.
+          Here's to endless joy, unforgettable moments, and a lifetime of love.
+          Cheers to you, my radiant and special love! 🎉🥂❤️🎂.
+        </p>
+        <p class="hope-message">Hope your day goes great😘!</p>
+      </div>
+    </div>
+    <script>
+      document.body.querySelector('.card').addEventListener('click', function () {
+        var birthdayMessages = [
+          "Happy Birthday to the woman who holds my heart and my future. May this day be a glimpse of the joy and love we'll share throughout our lives together. 🎉🥂❤️🎂",
+          "On your special day, I celebrate the amazing person you are and the incredible future we'll build together. Happy Birthday, my future wife! 🎉🎂❤️🥂",
+          'To the future Mrs. Saradhana, Happy Birthday! May each year we celebrate together be a testament to our enduring love and happiness. 🎉🥂❤️🎂',
+          "Happy Birthday to the love of my life and my future wife! Here's to a lifetime filled with laughter, adventure, and boundless love. 🎉🎂❤️🥂",
+          "As you celebrate another year of life, know that I'm eagerly looking forward to celebrating countless birthdays with you as my future wife. Happy Birthday! 🎉🎂❤️🥂",
+          'Wishing the happiest of birthdays to the one who has my heart and my future. May our love continue to grow stronger with each passing year. 🎉🥂❤️🎂',
+          "Happy Birthday, my future wife! Your presence in my life is the greatest gift. Here's to a lifetime of shared dreams, love, and beautiful memories. 🎉🎂❤️🥂",
+          "To the woman I'm destined to spend my life with, Happy Birthday! May this day mark the beginning of a lifetime filled with love, laughter, and unforgettable moments. 🎉🎂❤️🥂",
+          "As you celebrate another year of life, I celebrate the future we're creating together. Happy Birthday, my future wife! May it be as incredible as you are. 🎉🎂❤️🥂",
+          "Happy Birthday to the future Mrs. Saradhana! May this day be a reminder of the love and happiness that awaits us. Here's to a beautiful future together. 🎉🎂❤️🥂",
+          "Happy Birthday to the love of my life, my future wife! Each day with you is a gift, and I can't wait to unwrap the rest of our lives together. 🎉💖🎂",
+          'On your special day, my love, I celebrate not only your birth but also the day our destinies intertwined. May your birthday be as beautiful as our future together. 🎉❤️🎂',
+          "Wishing my future wife the happiest of birthdays! You are the melody to my heart's song, and I can't wait to compose a lifetime of love with you. 🎉🎶❤️🎂",
+          "Happy Birthday to the one who lights up my world. Your smile is my sunshine, and your love is my guiding star. Here's to a future filled with love and endless happiness. 🎉☀️❤️🎂",
+          'To the future Mrs. Saradhana, Happy Birthday! As the days pass, our love grows deeper and stronger. May this year be a testament to our boundless affection. 🎉❤️🎂',
+          "My love, on your special day, I'm reminded of the incredible journey we're about to embark upon. Happy Birthday, future wife! Here's to a future filled with love and cherished moments. 🎉❤️🎂",
+          'Happy Birthday, my future wife! Your love is the canvas on which I want to paint the masterpiece of our life together. May every stroke be filled with love and passion. 🎉🎨❤️🎂',
+          'Wishing the happiest of birthdays to the one who stole my heart. May our love story continue to unfold with grace, passion, and a future full of romance. 🎉❤️🎂',
+          "As you celebrate another year of life, I celebrate the future we're creating together. Happy Birthday, my future wife! May it be filled with love, laughter, and countless romantic moments. 🎉❤️🎂",
+          "Happy Birthday to the love of my life and my future wife! Your presence in my world is a treasure beyond measure. Here's to a lifetime of love, romance, and unforgettable moments. 🎉❤️🎂",
+        ];
+        document.querySelector('.birthday-message').innerHTML =
+          birthdayMessages[Math.floor(Math.random() * 20)];
+      });
+    </script>
+  </body>
+</html>
